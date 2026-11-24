@@ -1,5 +1,32 @@
 # cotal-ai
 
+## 0.177.0
+
+### Patch Changes
+
+- e54ad42: Self-update can run npm when a relative PATH entry points to the only Node executable and its directory name contains a colon.
+- 744e2b3: When `cotal update --self` makes an owned `node_modules` directory writable, it removes abandoned installation staging in the same run.
+- Updated dependencies [d913e8e]
+- Updated dependencies [3b325e3]
+- Updated dependencies [f21c228]
+- Updated dependencies [0bb3186]
+- Updated dependencies [dc37dd9]
+- Updated dependencies [708df55]
+- Updated dependencies [eb9d25f]
+- Updated dependencies [e54ad42]
+- Updated dependencies [c9e6ab0]
+- Updated dependencies [24c84fe]
+  - @cotal-ai/cli@0.177.0
+  - @cotal-ai/core@0.177.0
+  - @cotal-ai/connector-core@0.177.0
+  - @cotal-ai/manager@0.177.0
+  - @cotal-ai/workspace@0.177.0
+  - @cotal-ai/auth@0.177.0
+  - @cotal-ai/delivery@0.177.0
+  - @cotal-ai/registry@0.177.0
+  - @cotal-ai/runtime@0.177.0
+  - @cotal-ai/seat@0.177.0
+
 ## 0.176.6
 
 ### Patch Changes

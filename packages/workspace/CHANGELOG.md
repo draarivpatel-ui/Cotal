@@ -1,5 +1,13 @@
 # @cotal-ai/workspace
 
+## 0.177.0
+
+### Patch Changes
+
+- 24c84fe: Report a permission refusal when a connection using an explicit credential cannot check the project's authentication mode. The connection still stops before using the credential.
+- Updated dependencies [0bb3186]
+  - @cotal-ai/core@0.177.0
+
 ## 0.176.6
 
 ### Patch Changes

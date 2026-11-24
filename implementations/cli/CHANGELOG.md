@@ -1,5 +1,26 @@
 # @cotal-ai/cli
 
+## 0.177.0
+
+### Minor Changes
+
+- 0bb3186: A launcher can now list the commands and skills a harness offers in a directory before any agent starts, and start an agent with one of them as its first turn. The Manager's new `harness-commands` read (`{ agent, cwd }`) asks Claude Code, Codex, pi or OpenCode 2.x in that directory and answers the entries a seat's `command` takes, or `supported: false` with a reason for a harness whose seats run no commands; it starts no seat and is granted where `list-dir` is. `spawn` takes `firstCommand: { target, name, args? }` and its acceptance names `firstCommand.id`. The agent queues the command under that id before any other and runs it as its first turn through its own command lane once the harness runs commands, and `command-state` reports a refusal. The Manager cluster advances to revision 54.
+
+### Patch Changes
+
+- d913e8e: When the first broker start preview refuses `--foreground`, it tells you to remove that flag and keep `--dry-run` and the rest of the command.
+- 3b325e3: Keep `--json` or `--plain` in the command suggested for retrying a foreground manifest preview.
+- f21c228: When `--no-input` or `--no-color` is given a value, the CLI explains how to retry without one.
+- 708df55: Self-update identifies a refused proxy configured in npm instead of reporting a registry outage.
+- eb9d25f: Keep `--foreground` and `--no-manager` in the suggested restart when another program holds the recorded broker port.
+- e54ad42: Self-update can run npm when a relative PATH entry points to the only Node executable and its directory name contains a colon.
+- c9e6ab0: When a direct spawn or preview refuses an unsupported model variant, it tells you which command option or persona field to remove.
+- 24c84fe: Report a permission refusal when a connection using an explicit credential cannot check the project's authentication mode. The connection still stops before using the credential.
+- Updated dependencies [0bb3186]
+- Updated dependencies [24c84fe]
+  - @cotal-ai/core@0.177.0
+  - @cotal-ai/workspace@0.177.0
+
 ## 0.176.6
 
 ### Patch Changes
